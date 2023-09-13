@@ -8,8 +8,6 @@ metadata:
     - python
     - test
 spec:
-  # owner: web@example.com
-  # type: application
   owner: user:guest
   type: service
   parameters:
@@ -45,7 +43,6 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              # - dev.azure.com
               - github.com
   steps:
     - id: template
@@ -61,7 +58,6 @@ spec:
 
     - id: publish
       name: Publish
-      # action: publish:azure
       action: publish:github
       input:
         allowedHosts: ['github.com']
@@ -77,8 +73,6 @@ spec:
         catalogInfoPath: "/catalog-info.yaml"
 
   output:
-    # remoteUrl: ${{ steps.publish.output.remoteUrl }}
-    # entityRef: ${{ steps.register.output.entityRef }}
     links:
       - title: Repository
         url: ${{ steps['publish'].output.remoteUrl }}
