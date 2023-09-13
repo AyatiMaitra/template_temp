@@ -8,7 +8,8 @@ metadata:
     - python
     - test
 spec:
-  owner: user:guest
+  owner: AyatiMaitra
+  #owner: user:guest
   type: service
   parameters:
     - title: Provide some simple information
